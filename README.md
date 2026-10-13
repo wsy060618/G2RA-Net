@@ -1,6 +1,6 @@
-# SliceRel-U-Net
+# G2RA-Net
 
-G2RA-Net是本项目的最终命名，其原名为SliceRel-U-Net。本仓库包含 SliceRel-U-Net 的模型、训练和评估代码。输入是同一病例中连续的 `S` 张切片，输出是每张切片的分割结果。
+G2RA-Net是本项目的最终命名，其原名为 SliceRel-U-Net 。本仓库包含 G2RA-Net 的模型、训练和评估代码。输入是同一病例中连续的 `S` 张切片，输出是每张切片的分割结果。
 
 ## 1. 安装
 
