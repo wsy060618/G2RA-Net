@@ -1,0 +1,54 @@
+seed: 42
+device: auto
+
+model:
+  in_channels: 1
+  num_classes: 2
+  slice_count: 3
+  backbone_profile: canonical_same_size_64
+  variant: slicerel_unet
+  graph_hidden_channels: 1024
+  adjacent_weight: 1.0
+  distant_weight: 0.1
+  global_weight: 1.0
+  self_loop_weight: 1.0
+  adjacency_normalization: symmetric
+  global_node_init: mean
+  attention_dim: null
+  attention_dim_rule: quarter_channels
+  adjacency_mlp_hidden: null
+  adjacency_mlp_activation: relu
+  adjacency_mlp_output_activation: sigmoid
+  qkv_bias: false
+  spatial_reduction: 4
+  csag_position: post_concat_pre_fuse
+  gate_adapter: direct_flat_to_slice_channel
+
+data:
+  manifest: data/manifest.csv
+  slice_axis: 2
+  group_stride: 1
+  target_size: [224, 224]
+  normalization: minmax
+  cache_volumes: 2
+  batch_size: 2
+  validation_batch_size: 1
+  num_workers: 2
+
+loss:
+  ce_weight: 1.0
+  dice_weight: 1.0
+  hausdorff_dt_weight: 0.1
+  dice_include_background: false
+
+optimizer:
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+
+training:
+  epochs: 100
+  amp: true
+  amp_dtype: bfloat16
+  gradient_accumulation_steps: 4
+  gradient_clip_norm: 1.0
+  output_dir: runs/example

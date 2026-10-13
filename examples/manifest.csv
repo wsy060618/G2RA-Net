@@ -1,0 +1,5 @@
+volume_id,image_path,label_path,split,spacing_0,spacing_1,spacing_2
+case001,../data/images/case001.nii.gz,../data/labels/case001.nii.gz,train,1.0,1.0,1.0
+case002,../data/images/case002.nii.gz,../data/labels/case002.nii.gz,val,1.0,1.0,1.0
+case003,../data/images/case003.nii.gz,../data/labels/case003.nii.gz,test,1.0,1.0,1.0
+

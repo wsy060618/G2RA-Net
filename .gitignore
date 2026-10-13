@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.idea/
+.vscode/
+
+# Local datasets, checkpoints, and experiment outputs
+data/
+runs/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+

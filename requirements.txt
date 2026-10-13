@@ -1,0 +1,7 @@
+torch>=2.0
+numpy>=1.23
+PyYAML>=6.0
+nibabel>=5.0
+monai==1.5.2
+scipy>=1.12,<2
+
